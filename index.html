@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/reveal-js/dist/reset.css">
 <link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/reveal-js/dist/reveal.css">
-  <link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/css/custom-theme.min.ad326f5f04a718bf2263de7b321e8239a6a466e6a3e6b6ba1eddbdec608c86d9.css" id="theme"><link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/highlight-js/solarized-dark.min.css">
+  <link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/css/custom-theme.min.990d2dd97c07a07e14cbcf312ed0d8138699bbcf386be833a209fefa2eda84db.css" id="theme"><link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/highlight-js/solarized-dark.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oxygen Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu Mono" rel="stylesheet">
@@ -61,32 +61,150 @@
 </div>
 </section><section>
 <h1 id="comparison-with-exisisting-solutions">Comparison with exisisting solutions</h1>
+<div style="font-size:0.8em">
+<table>
+    <thead>
+        <tr>
+            <th> </th>
+            <th>Simulator</th>
+            <th>Configurability</th>
+            <th>Lifecycle Management</th>
+            <th>Experience Extraction</th>
+            <th>Scalability</th>
+            <th>Distributed Execution</th>
+            <th>Deep Learning Integration</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="4" style="writing-mode: vertical-lr; transform: rotate(180deg); text-align: center; vertical-align: middle;"><strong> General Purpose </strong></td>
+            <td>NetLogo</td>
+            <td style="color: green;">✔</td>
+            <td><span style="color: #a63a50;"> <strong> / </strong> </span></td>
+            <td><span style="color: #a63a50;"> <strong> / </strong> </span></td>
+            <td><span style="color: red;">✗</span></td>
+            <td><span style="color: red;">✗</span></td>
+            <td><span style="color: red;">✗</span></td>
+        </tr>
+        <tr>
+            <td>MESA</td>
+            <td> <span style="color: green;">✔</span> <span style="font-size:0.7em;">(Modular) </span> </td>
+            <td><span style="color: #a63a50;"> <strong> / </strong> </span></td>
+            <td><span style="color: #a63a50;"> <strong> / </strong> </span></td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+        </tr>
+        <tr>
+            <td>Sibilla</td>
+            <td> <span style="color: green;">✔</span>  <span style="font-size:0.7em;">(Multiple Specs)</span></td>
+            <td style="color: green;">✔</td>
+            <td><span style="color: #a63a50;"> <strong> / </strong> </span></td>
+            <td><span style="color: red;">✗</span></td>
+            <td><span style="color: red;">✗</span></td>
+            <td><span style="color: red;">✗</span></td>
+        </tr>
+        <tr>
+            <td>Alchemist</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td> <span style="color: #f57a00;"> <strong> ~ </strong> </span>  <span style="font-size:0.7em;">(Partially with ScalaPy &amp; GraalPy)</span></td>
+        </tr>
+        <!-- <tr>
+            <td colspan="7"><strong>Swarm Robotics</strong></td>
+        </tr> -->
+        <tr>
+            <td rowspan="3" style="writing-mode: vertical-lr; transform: rotate(180deg); text-align: center;"><strong>Swarm Robotics</strong></td>
+            <td>ARGoS</td>
+            <td> <span style="color: green;"> ✔ </span>  <span style="font-size:0.7em;">(Limited for MARL)</span></td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td><span style="color: red;">✗</span></td>
+            <td><span style="color: red;">✗</span></td>
+        </tr>
+        <tr>
+            <td>Gazebo</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td><span style="color: red;">✗</span></td>
+            <td style="color: green;">✔</td>
+            <td><span style="color: red;">✗</span></td>
+        </tr>
+        <tr>
+            <td>Kilombo</td>
+            <td><span style="color: red;">✗</span></td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td><span style="color: red;">✗</span></td>
+            <td><span style="color: red;">✗</span></td>
+        </tr>
+        <!-- <tr>
+            <td colspan="7"><strong>Multi-agent reinforcement learning</strong></td>
+        </tr> -->
+        <tr>
+            <td rowspan="3" style="writing-mode: vertical-lr; transform: rotate(180deg); text-align: center; vertical-align: middle;"><strong>MARL</strong></td>
+            <td>PettingZoo</td>
+            <td> <span style="color: green;"> ✔ </span>  <span style="font-size:0.7em;">(Via Environments)</span></td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td><span style="color: red;">✗</span></td>
+            <td><span style="color: red;">✗</span></td>
+            <td style="color: green;">✔</td>
+        </tr>
+        <tr>
+            <td>Unity ML-Agents</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td><span style="color: red;">✗</span></td>
+            <td><span style="color: red;">✗</span></td>
+            <td style="color: green;">✔</td>
+        </tr>
+        <tr>
+            <td>Neural MMO</td>
+            <td> <span style="color: green;"> ✔ </span> <span style="font-size:0.7em;"> (Task-Specific)</span></td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td style="color: green;">✔</td>
+            <td><span style="color: red;">✗</span></td>
+            <td style="color: green;">✔</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p><br> <br></p>
 </section><section>
 <h1 id="marlalchemy-prototype">MARLAlchemy Prototype</h1>
 </section><section>
 <h1 id="experimental-evaluation-scenario">Experimental Evaluation: Scenario</h1>
 <ul>
-<li>Experiment on multi-agent flocking behavior: agents must learn to move while maintaining cohesive groups and avoiding collisions</li>
-<li>Cohesion among agents is defined by two hyperparameters $\delta_U$ and $\delta_L$ (target distance range an agent aims to maintain from its neighbors)</li>
-<li>$100$ agents in a Euclidean 2D space with no boundaries</li>
-<li>Each agent has $8$ possible movement actions corresponding to the directions on a grid (horizontal, vertical, and diagonal)</li>
-<li>The observation space for each agent is defined as the relative vector to its neighbors: $\mathcal{O} =$ { $( x_i - x_j, y_i - y_j ) \mid j \in \mathcal{N}_i$ }</li>
+<li>Experiment on <em>multi-agent flocking behavior</em> : agents must learn to move while maintaining <em>cohesive</em> groups and avoiding <em>collisions</em></li>
+<li>Cohesion among agents is defined by two hyperparameters $\delta_U$ and $\delta_L$ (<em>target distance range</em> an agent aims to maintain from its <em>neighbors</em>)</li>
+<li><em>$100$ agents</em> in a Euclidean 2D space with no boundaries</li>
+<li>Each agent has <em>$8$ possible movement actions</em> corresponding to the directions on a grid (horizontal, vertical, and diagonal)</li>
+<li>The observation space for each agent is defined as the <em>relative distance vector to its neighbors</em>: $\mathcal{O} =$ { $( x_i - x_j, y_i - y_j ) \mid j \in \mathcal{N}_i$ }</li>
 <li>Each agent is rewarded if the maximum distance $d$ to its neighbors is within a range $]\delta_L, \delta_U [$, and it is penalized otherwise: $\mathcal{R} =  0 \text{ if } \delta_U &lt; d &lt; \delta_L, \text{ otherwise } -1$</li>
 </ul>
 </section><section>
 <h1 id="experimental-evaluation-setup">Experimental Evaluation: Setup</h1>
 <ul>
-<li>Training algorithm: Conservative Q-Learning</li>
-<li>$9$ global training rounds followed by $1$ evaluation round</li>
+<li>Training algorithm: <em>Conservative Q-Learning</em></li>
+<li><em>$9$</em> global <em>training rounds</em> followed by <em>$1$ evaluation round</em></li>
 <li>Each global round consisted of one or more simulations, depending on the level of multiple simulation parallelism $p$ ( $p \in$ { $1,2,4,8$ } )</li>
-<li>Each simulation consisted of $200$ episodes</li>
+<li>Each simulation consisted of <em>$200$ episodes</em></li>
 <li>Quality metrics:
 <ul>
 <li>Average distance of the agents from their neighbors</li>
 <li>Value of the reward function $\mathcal{R}$</li>
 </ul>
 </li>
-<li>All the experiments are publicly available and reproducible</li>
+<li>All the experiments are <em>publicly available</em> and <em>reproducible</em></li>
 </ul>
 <img src="qr.svg" width="15%" style="position: absolute; bottom: -40%; right: 0%;">
 </section><section>
