@@ -92,6 +92,14 @@ section.has-light-background {
 	object-fit: contain;
 }
 
+.reveal table, td, th {
+	border-collapse: collapse !important; /* Unisce i bordi */
+}
+
+.reveal table, th, td, thead, tbody {
+	border: 2px solid black !important; /* Spessore e colore del bordo */
+}
+
 .reveal code {
 	//color: rgb(209, 28, 124);
 	font-family: "JetBrains Mono", "Oxygen Mono", "Roboto Mono", "Ubuntu Mono", "Courier New", Courier, monospace;
