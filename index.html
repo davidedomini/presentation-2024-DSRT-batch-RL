@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/reveal-js/dist/reset.css">
 <link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/reveal-js/dist/reveal.css">
-  <link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/css/custom-theme.min.ba3c99c1950a6aa337c1aaba6e8ae2ce0b727f1d05d14c0cc10d643bbc73eed8.css" id="theme"><link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/highlight-js/solarized-dark.min.css">
+  <link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/css/custom-theme.min.ad326f5f04a718bf2263de7b321e8239a6a466e6a3e6b6ba1eddbdec608c86d9.css" id="theme"><link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/highlight-js/solarized-dark.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oxygen Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu Mono" rel="stylesheet">
@@ -36,13 +36,71 @@
 <img src="disi.svg" style="width: 40%">
 </div>
 </section><section>
+<h1 id="motivation">Motivation</h1>
 </section><section>
+<h1 id="marl-formalization">MARL Formalization</h1>
 </section><section>
 <h1 id="pipeline-architecture">Pipeline Architecture</h1>
-<div style="text-align: center; width: 100%;">
-<img src="pipeline.svg" style="width: 40%">
+<p><br> <br></p>
+
+<div class="container w-100 p-0">
+    <div class="row "><div class="col "><ul>
+<li>Current observation $\rho$</li>
+<li>Action computation $\gamma$</li>
+<li>Environment interation $\theta$</li>
+<li>Next observatiobn $\rho_\mathcal{+}$</li>
+<li>Collective reward computation $R$</li>
+<li>Experience storage $\mathbb{E}$</li>
+</ul>
+</div>
+<div class="col "><div style="text-align: center; width: 100%;">
+<img src="pipeline.svg" style="width: 100%">
+</div>
+</div>
+</div>
 </div>
 </section><section>
+<h1 id="comparison-with-exisisting-solutions">Comparison with exisisting solutions</h1>
+</section><section>
+<h1 id="marlalchemy-prototype">MARLAlchemy Prototype</h1>
+</section><section>
+<h1 id="experimental-evaluation-scenario">Experimental Evaluation: Scenario</h1>
+<ul>
+<li>Experiment on multi-agent flocking behavior: agents must learn to move while maintaining cohesive groups and avoiding collisions</li>
+<li>Cohesion among agents is defined by two hyperparameters $\delta_U$ and $\delta_L$ (target distance range an agent aims to maintain from its neighbors)</li>
+<li>$100$ agents in a Euclidean 2D space with no boundaries</li>
+<li>Each agent has $8$ possible movement actions corresponding to the directions on a grid (horizontal, vertical, and diagonal)</li>
+<li>The observation space for each agent is defined as the relative vector to its neighbors: $\mathcal{O} =$ { $( x_i - x_j, y_i - y_j ) \mid j \in \mathcal{N}_i$ }</li>
+<li>Each agent is rewarded if the maximum distance $d$ to its neighbors is within a range $]\delta_L, \delta_U [$, and it is penalized otherwise: $\mathcal{R} =  0 \text{ if } \delta_U &lt; d &lt; \delta_L, \text{ otherwise } -1$</li>
+</ul>
+</section><section>
+<h1 id="experimental-evaluation-setup">Experimental Evaluation: Setup</h1>
+<ul>
+<li>Training algorithm: Conservative Q-Learning</li>
+<li>$9$ global training rounds followed by $1$ evaluation round</li>
+<li>Each global round consisted of one or more simulations, depending on the level of multiple simulation parallelism $p$ ( $p \in$ { $1,2,4,8$ } )</li>
+<li>Each simulation consisted of $200$ episodes</li>
+<li>Quality metrics:
+<ul>
+<li>Average distance of the agents from their neighbors</li>
+<li>Value of the reward function $\mathcal{R}$</li>
+</ul>
+</li>
+<li>All the experiments are publicly available and reproducible</li>
+</ul>
+<img src="qr.svg" width="15%" style="position: absolute; bottom: -40%; right: 0%;">
+</section><section>
+<h1 id="results">Results</h1>
+<div style="text-align: center; width: 100%;">
+<img src="results.svg" style="width: 100%">
+</div>
+</section><section>
+<h1 id="visualizing-a-simulation">Visualizing a Simulation</h1>
+<div style="text-align: center; width: 100%;">
+<img src="simulation.svg" style="width: 100%">
+</div>
+</section><section>
+<h1 id="conclusion-and-future-work">Conclusion and Future Work</h1>
 </section>
 
   
