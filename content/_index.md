@@ -118,7 +118,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
             <td style="color: green;">✔</td>
             <td style="color: green;">✔</td>
             <td style="color: green;">✔</td>
-            <td> <span style="color: #f57a00;"> <strong> ~ </strong> </span>  <span style="font-size:0.7em;">(Partially with ScalaPy & GraalPy)</span></td>
+            <td> <span style="color: #f57a00;"> <strong> ~ </strong> </span>  <span style="font-size:0.7em;">(With ScalaPy & GraalPy)</span></td>
         </tr>
         <!-- <tr>
             <td colspan="7"><strong>Swarm Robotics</strong></td>
@@ -186,7 +186,17 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 </table>
 </div>
 
-<br> <br>
+<div style="font-size:0.8em; text-align:left; margin-left:3%;">
+
+<span style="color: green; margin-right: 1%;"> ✔ </span> Yes
+
+<span style="color: #f57a00; margin-right: 1%;"> <strong>~</strong> </span> Partially, using third-party tools
+
+<span style="color: #a63a50; margin-right: 1%;"> <strong>/</strong> </span> Limited
+
+<span style="color: red; margin-right: 1%;">✗</span> No
+
+</div>
 
 ---
 
