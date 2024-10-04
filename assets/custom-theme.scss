@@ -64,6 +64,15 @@ section.has-light-background {
 	color: #22373b;
 }
 
+.custom.back {
+    background-color: #EFF1ED; /* Colore iniziale */
+    transition: color 0.5s ease;
+}
+
+.reveal .fragment.visible.custom.back {
+    background-color: #d1ccdc !important; /* Cambiamento del colore quando visibile */
+}
+
 .reveal pre {
 	margin: 1em auto;
 }

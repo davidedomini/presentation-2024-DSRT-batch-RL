@@ -29,11 +29,60 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 ---
 
-# Motivation
+# MARL
+
+{{% multicol %}}
+
+{{% col %}}
+
+- Current observation $\rho$
+- Action computation $\gamma$
+- Environment interation $\theta$
+- Next observatiobn $\rho_\mathcal{+}$
+- Collective reward computation $R$
+- Experience storage $\mathbb{E}$
+
+{{%/ col %}}
+
+{{% col %}}
+
+<div style="text-align: center; width: 100%;">
+<img src="MARL.png" style="width: 100%" />
+</div>
+{{%/ col %}}
+
+
+{{%/ multicol %}}
 
 ---
 
 # MARL Formalization
+
+---
+
+# Motivation
+
+<div style="text-align:left;">
+{{% fragment %}}
+- **Challenges in Multi-Agent Reinforcement Learning (ManyRL):**
+    - *Decentralized* decision-making processes lead to *complex system dynamics*
+    - *Emergent behaviors* arise from *interactions* among numerous autonomous agents
+{{%/ fragment %}}
+{{% fragment %}}
+- **Limitations of Real-World Learning:**
+    - *Impractical* due to high costs, time constraints, and legal/physical restrictions
+{{%/ fragment %}}
+{{% fragment %}}
+- **Advantages of Simulation in ManyRL Research:**
+    - Enables *scalable training* of ManyRL algorithms in a controlled, safe, and cost-effective environment
+    - Facilitates *exploration* of diverse scenarios, fine-tuning of policies, and evaluation of system robustness before real-world deployment
+{{%/ fragment %}}
+{{% fragment %}}
+- **Existing Simulators:**
+    - Platforms like PettingZoo and Gazebo are designed for *small-scale scenarios*
+    - They lack *scalability* and *configurability*, which are critical for addressing ManyRL challenges
+{{%/ fragment %}}
+</div>
 
 ---
 
@@ -112,13 +161,13 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
             <td><span style="color: red;">✗</span></td>
         </tr>
         <tr>
-            <td>Alchemist</td>
-            <td style="color: green;">✔</td>
-            <td style="color: green;">✔</td>
-            <td style="color: green;">✔</td>
-            <td style="color: green;">✔</td>
-            <td style="color: green;">✔</td>
-            <td> <span style="color: #f57a00;"> <strong> ~ </strong> </span>  <span style="font-size:0.7em;">(With ScalaPy & GraalPy)</span></td>
+            <td class="fragment custom back" data-fragment-index="0" >Alchemist</td>
+            <td class="fragment custom back" data-fragment-index="0" style="color: green;">✔</td>
+            <td class="fragment custom back" data-fragment-index="0" style="color: green;">✔</td>
+            <td class="fragment custom back" data-fragment-index="0" style="color: green;">✔</td>
+            <td class="fragment custom back" data-fragment-index="0" style="color: green;">✔</td>
+            <td class="fragment custom back" data-fragment-index="0" style="color: green;">✔</td>
+            <td class="fragment custom back" data-fragment-index="0"> <span style="color: #f57a00;"> <strong> ~ </strong> </span>  <span style="font-size:0.7em;">(With ScalaPy & GraalPy)</span></td>
         </tr>
         <!-- <tr>
             <td colspan="7"><strong>Swarm Robotics</strong></td>
@@ -197,6 +246,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 <span style="color: red; margin-right: 1%;">✗</span> No
 
 </div>
+<br>
 
 ---
 
