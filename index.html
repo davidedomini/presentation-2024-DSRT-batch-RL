@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/reveal-js/dist/reset.css">
 <link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/reveal-js/dist/reveal.css">
-  <link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/css/custom-theme.min.990d2dd97c07a07e14cbcf312ed0d8138699bbcf386be833a209fefa2eda84db.css" id="theme"><link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/highlight-js/solarized-dark.min.css">
+  <link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/css/custom-theme.min.330bccb977c4466d3c815087e7e5236a9a68d0b9ef0c993b219c93821736073a.css" id="theme"><link rel="stylesheet" href="/presentation-2024-DSRT-batch-RL/highlight-js/solarized-dark.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oxygen Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu Mono" rel="stylesheet">
@@ -36,9 +36,85 @@
 <img src="disi.svg" style="width: 40%">
 </div>
 </section><section>
-<h1 id="motivation">Motivation</h1>
+<h1 id="marl">MARL</h1>
+
+<div class="container w-100 p-0">
+    <div class="row "><div class="col "><ul>
+<li>Current observation $\rho$</li>
+<li>Action computation $\gamma$</li>
+<li>Environment interation $\theta$</li>
+<li>Next observatiobn $\rho_\mathcal{+}$</li>
+<li>Collective reward computation $R$</li>
+<li>Experience storage $\mathbb{E}$</li>
+</ul>
+</div>
+<div class="col "><div style="text-align: center; width: 100%;">
+<img src="MARL.png" style="width: 100%">
+</div>
+</div>
+</div>
+</div>
 </section><section>
 <h1 id="marl-formalization">MARL Formalization</h1>
+</section><section>
+<h1 id="motivation">Motivation</h1>
+<div style="text-align:left;">
+
+
+<span class="fragment ">
+  <ul>
+<li><strong>Challenges in Multi-Agent Reinforcement Learning (ManyRL):</strong>
+<ul>
+<li><em>Decentralized</em> decision-making processes lead to <em>complex system dynamics</em></li>
+<li><em>Emergent behaviors</em> arise from <em>interactions</em> among numerous autonomous agents</li>
+</ul>
+</li>
+</ul>
+
+</span>
+
+
+
+<span class="fragment ">
+  <ul>
+<li><strong>Limitations of Real-World Learning:</strong>
+<ul>
+<li><em>Impractical</em> due to high costs, time constraints, and legal/physical restrictions</li>
+</ul>
+</li>
+</ul>
+
+</span>
+
+
+
+<span class="fragment ">
+  <ul>
+<li><strong>Advantages of Simulation in ManyRL Research:</strong>
+<ul>
+<li>Enables <em>scalable training</em> of ManyRL algorithms in a controlled, safe, and cost-effective environment</li>
+<li>Facilitates <em>exploration</em> of diverse scenarios, fine-tuning of policies, and evaluation of system robustness before real-world deployment</li>
+</ul>
+</li>
+</ul>
+
+</span>
+
+
+
+<span class="fragment ">
+  <ul>
+<li><strong>Existing Simulators:</strong>
+<ul>
+<li>Platforms like PettingZoo and Gazebo are designed for <em>small-scale scenarios</em></li>
+<li>They lack <em>scalability</em> and <em>configurability</em>, which are critical for addressing ManyRL challenges</li>
+</ul>
+</li>
+</ul>
+
+</span>
+
+</div>
 </section><section>
 <h1 id="pipeline-architecture">Pipeline Architecture</h1>
 <p><br> <br></p>
@@ -105,13 +181,13 @@
             <td><span style="color: red;">✗</span></td>
         </tr>
         <tr>
-            <td>Alchemist</td>
-            <td style="color: green;">✔</td>
-            <td style="color: green;">✔</td>
-            <td style="color: green;">✔</td>
-            <td style="color: green;">✔</td>
-            <td style="color: green;">✔</td>
-            <td> <span style="color: #f57a00;"> <strong> ~ </strong> </span>  <span style="font-size:0.7em;">(With ScalaPy &amp; GraalPy)</span></td>
+            <td class="fragment custom back" data-fragment-index="0">Alchemist</td>
+            <td class="fragment custom back" data-fragment-index="0" style="color: green;">✔</td>
+            <td class="fragment custom back" data-fragment-index="0" style="color: green;">✔</td>
+            <td class="fragment custom back" data-fragment-index="0" style="color: green;">✔</td>
+            <td class="fragment custom back" data-fragment-index="0" style="color: green;">✔</td>
+            <td class="fragment custom back" data-fragment-index="0" style="color: green;">✔</td>
+            <td class="fragment custom back" data-fragment-index="0"> <span style="color: #f57a00;"> <strong> ~ </strong> </span>  <span style="font-size:0.7em;">(With ScalaPy &amp; GraalPy)</span></td>
         </tr>
         <!-- <tr>
             <td colspan="7"><strong>Swarm Robotics</strong></td>
@@ -184,6 +260,7 @@
 <p><span style="color: #a63a50; margin-right: 1%;"> <strong>/</strong> </span> Limited</p>
 <p><span style="color: red; margin-right: 1%;">✗</span> No</p>
 </div>
+<br>
 </section><section>
 <h1 id="marlalchemy-prototype">MARLAlchemy Prototype</h1>
 </section><section>
