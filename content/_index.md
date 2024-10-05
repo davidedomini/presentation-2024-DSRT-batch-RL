@@ -31,7 +31,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 # Many-Agent Reinforcement Learning
 
-<img src="marl.svg" style="width: 65%" />
+<img src="marl.png" style="width: 65%" />
 
 ---
 
@@ -231,9 +231,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 # MARLAlchemy Prototype
 
-<div style="text-align: center; width: 100%;">
-<img src="prototype.svg" style="width: 100%" />
-</div>
+<img src="prototype.svg" style="width: 85%" />
 
 <br>
 
