@@ -37,6 +37,32 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 # MARL Formalization
 
+<div style="text-align:left;">
+
+{{% fragment %}}
+- *SwarMDP* is an extension the classical *Markov Decision Process* (MDP) model, suitable for Many-Agent RL
+{{%/ fragment %}}
+{{% fragment %}}
+- Formally, a SwarMDP is a tuple of a *swarming agent $\mathbb{A}$* and an *environment $\mathcal{E}$*
+{{%/ fragment %}}
+{{% fragment %}}
+- The agent $\mathbb{A}$ is defined by:
+    - $\mathcal{S}$: the set of possible *internal states* an agent can perceive
+    - $\mathcal{O}$: the *environment observations* an agent can make
+    - $\mathcal{A}$: the set of *actions* an agent can perform
+    - $\mathcal{R}: \mathcal{O} \rightarrow \mathbb{R}$: a function mapping each *state* to a numerical *reward value*, reflecting the *desirability* of that state
+    - $\pi: \mathcal{O} \rightarrow \mathcal{A}$: the agent's *policy*, mapping *observations to actions*, which can be deterministic or probabilistic
+{{%/ fragment %}}
+{{% fragment %}}
+- The environment $\mathcal{E}$ represents the world in which the agent operates, and is defined by:
+    - $\mathcal{P}$ is the *number of agents* in the system
+    - $\mathbb{A}$ is a prototypical agent *defining properties* common to all agents
+    - $\mathcal{T}: \mathcal{S^\mathcal{P}} \times \mathcal{A}^\mathcal{P} \times \mathcal{S^\mathcal{P}} \rightarrow \mathbb{R}^\mathcal{P}$ is the *global transition function*, determining the evolution of the system's state based on the current states and actions of all agents
+    - $\xi: \mathcal{S^\mathcal{P}} \rightarrow \mathcal{O}^\mathcal{P}$ is a function *mapping the state of all agents to the corresponding observations* available to each agent
+{{%/ fragment %}}
+
+</div>
+
 ---
 
 # Motivation
