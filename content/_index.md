@@ -31,7 +31,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 # Many-Agent Reinforcement Learning
 
-<img src="marl.png" style="width: 65%" />
+<img src="marl.png" style="width: 100%" />
 
 ---
 
