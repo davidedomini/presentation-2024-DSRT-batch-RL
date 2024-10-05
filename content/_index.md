@@ -29,30 +29,9 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 ---
 
-# MARL
+# Many-Agent Reinforcement Learning
 
-{{% multicol %}}
-
-{{% col %}}
-
-- Current observation $\rho$
-- Action computation $\gamma$
-- Environment interation $\theta$
-- Next observatiobn $\rho_\mathcal{+}$
-- Collective reward computation $R$
-- Experience storage $\mathbb{E}$
-
-{{%/ col %}}
-
-{{% col %}}
-
-<div style="text-align: center; width: 100%;">
-<img src="MARL.png" style="width: 100%" />
-</div>
-{{%/ col %}}
-
-
-{{%/ multicol %}}
+<img src="marl.svg" style="width: 65%" />
 
 ---
 
@@ -83,35 +62,6 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
     - They lack *scalability* and *configurability*, which are critical for addressing ManyRL challenges
 {{%/ fragment %}}
 </div>
-
----
-
-# Pipeline Architecture
-
-<br> <br>
-
-{{% multicol %}}
-
-{{% col %}}
-
-- Current observation $\rho$
-- Action computation $\gamma$
-- Environment interation $\theta$
-- Next observatiobn $\rho_\mathcal{+}$
-- Collective reward computation $R$
-- Experience storage $\mathbb{E}$
-
-{{%/ col %}}
-
-{{% col %}}
-
-<div style="text-align: center; width: 100%;">
-<img src="pipeline.svg" style="width: 100%" />
-</div>
-{{%/ col %}}
-
-
-{{%/ multicol %}}
 
 ---
 
@@ -250,7 +200,42 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 ---
 
+# Pipeline Architecture
+
+<br> <br>
+
+{{% multicol %}}
+
+{{% col %}}
+
+- Current observation $\rho$
+- Action computation $\gamma$
+- Environment interation $\theta$
+- Next observatiobn $\rho_\mathcal{+}$
+- Collective reward computation $R$
+- Experience storage $\mathbb{E}$
+
+{{%/ col %}}
+
+{{% col %}}
+
+<div style="text-align: center; width: 100%;">
+<img src="pipeline.svg" style="width: 100%" />
+</div>
+{{%/ col %}}
+
+
+{{%/ multicol %}}
+
+---
+
 # MARLAlchemy Prototype
+
+<div style="text-align: center; width: 100%;">
+<img src="prototype.svg" style="width: 100%" />
+</div>
+
+<br>
 
 ---
 
