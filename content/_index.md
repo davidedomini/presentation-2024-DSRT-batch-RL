@@ -40,7 +40,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 <div style="text-align:left;">
 
 {{% fragment %}}
-- *SwarMDP* is an extension the classical *Markov Decision Process* (MDP) model, suitable for Many-Agent RL
+- *SwarMDP* is an extension of the classical *Markov Decision Process* (MDP) model, suitable for Many-Agent RL
 {{%/ fragment %}}
 {{% fragment %}}
 - Formally, a SwarMDP is a tuple of a *swarming agent $\mathbb{A}$* and an *environment $\mathcal{E}$*
