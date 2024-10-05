@@ -252,7 +252,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 - Training algorithm: *Conservative Q-Learning*
 - *$9$* global *training rounds* followed by *$1$ evaluation round*
-- Each global round consisted of one or more simulations, depending on the level of multiple simulation parallelism $p$ ( $p \in$ { $1,2,4,8$ } )
+- Each global round consisted of one or more simulations, depending on the level of parallelism $p$ ( $p \in$ { $1,2,4,8$ } )
 - Each simulation consisted of *$200$ episodes*
 - Quality metrics:
     - Average distance of the agents from their neighbors 
