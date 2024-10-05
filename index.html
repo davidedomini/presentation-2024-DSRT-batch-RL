@@ -40,6 +40,59 @@
 <img src="marl.png" style="width: 100%">
 </section><section>
 <h1 id="marl-formalization">MARL Formalization</h1>
+<div style="text-align:left;">
+<p>
+
+<span class="fragment ">
+  </span></p><ul>
+<li><em>SwarMDP</em> is an extension the classical <em>Markov Decision Process</em> (MDP) model, suitable for Many-Agent RL</li>
+</ul>
+
+
+
+
+
+<span class="fragment ">
+  <ul>
+<li>Formally, a SwarMDP is a tuple of a <em>swarming agent $\mathbb{A}$</em> and an <em>environment $\mathcal{E}$</em></li>
+</ul>
+
+</span>
+
+
+
+<span class="fragment ">
+  <ul>
+<li>The agent $\mathbb{A}$ is defined by:
+<ul>
+<li>$\mathcal{S}$: the set of possible <em>internal states</em> an agent can perceive</li>
+<li>$\mathcal{O}$: the <em>environment observations</em> an agent can make</li>
+<li>$\mathcal{A}$: the set of <em>actions</em> an agent can perform</li>
+<li>$\mathcal{R}: \mathcal{O} \rightarrow \mathbb{R}$: a function mapping each <em>state</em> to a numerical <em>reward value</em>, reflecting the <em>desirability</em> of that state</li>
+<li>$\pi: \mathcal{O} \rightarrow \mathcal{A}$: the agent’s <em>policy</em>, mapping <em>observations to actions</em>, which can be deterministic or probabilistic</li>
+</ul>
+</li>
+</ul>
+
+</span>
+
+
+
+<span class="fragment ">
+  <ul>
+<li>The environment $\mathcal{E}$ represents the world in which the agent operates, and is defined by:
+<ul>
+<li>$\mathcal{P}$ is the <em>number of agents</em> in the system</li>
+<li>$\mathbb{A}$ is a prototypical agent <em>defining properties</em> common to all agents</li>
+<li>$\mathcal{T}: \mathcal{S^\mathcal{P}} \times \mathcal{A}^\mathcal{P} \times \mathcal{S^\mathcal{P}} \rightarrow \mathbb{R}^\mathcal{P}$ is the <em>global transition function</em>, determining the evolution of the system’s state based on the current states and actions of all agents</li>
+<li>$\xi: \mathcal{S^\mathcal{P}} \rightarrow \mathcal{O}^\mathcal{P}$ is a function <em>mapping the state of all agents to the corresponding observations</em> available to each agent</li>
+</ul>
+</li>
+</ul>
+
+</span>
+<p></p>
+</div>
 </section><section>
 <h1 id="motivation">Motivation</h1>
 <div style="text-align:left;">
