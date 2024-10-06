@@ -11,7 +11,8 @@ aliases = [
 +++
 
 
-# A Reusable Simulation Pipeline for Many-Agent Reinforcement Learning
+# A Reusable Simulation Pipeline for 
+# Many-Agent Reinforcement Learning
 
 [<span style="color: #BD4089">Davide Domini</span>](mailto:davide.domini@unibo.it),
 [Gianluca Aguzzi](mailto:gianluca.aguzzi@unibo.it) ,
@@ -35,6 +36,43 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 ---
 
+# MARL Examples
+
+{{% multicol %}}
+
+{{% col %}}
+
+<div style="text-align: center; width: 100%;">
+<img src="swarm1.jpg" style="width: 100%" />
+</div>
+
+{{%/ col %}}
+
+<!-- {{% col %}}
+
+<div style="text-align: center; width: 100%;">
+<img src="swarm2.jpg" style="width: 100%" />
+</div>
+
+{{%/ col %}} -->
+
+{{% col %}}
+
+<div style="text-align: center; width: 100%;">
+<img src="iov.png" style="width: 100%" />
+</div>
+
+{{%/ col %}}
+
+
+{{%/ multicol %}}
+
+<!-- <div style="text-align: center; width: 60%;"> -->
+<img src="swarm2.jpg" style="width:50%" />
+<!-- </div> -->
+
+
+---
 # MARL Formalization
 
 <div style="text-align:left;">
@@ -63,7 +101,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 </div>
 
----
+<!-- ---
 
 # MARL Formalization (2)
 
@@ -85,7 +123,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
     - *Centralized Training Decentralized Execution* (CTDE) paradigm as learning strategy
 {{%/ fragment %}}
 
-</div>
+</div> -->
 
 ---
 
@@ -291,10 +329,26 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 - Experiment on *multi-agent flocking behavior* : agents must learn to move while maintaining *cohesive* groups and avoiding *collisions*
 - Cohesion among agents is defined by two hyperparameters $\delta_U$ and $\delta_L$ (*target distance range* an agent aims to maintain from its *neighbors*)
-- *$100$ agents* in a Euclidean 2D space with no boundaries
-- Each agent has *$8$ possible movement actions* corresponding to the directions on a grid (horizontal, vertical, and diagonal)
+<!-- - *$100$ agents* in a Euclidean 2D space with no boundaries -->
+<!-- - Each agent has *$8$ possible movement actions* corresponding to the directions on a grid (horizontal, vertical, and diagonal) -->
 - The observation space for each agent is defined as the *relative distance vector to its neighbors*: $\mathcal{O} =$ { $( x_i - x_j, y_i - y_j ) \mid j \in \mathcal{N}_i$ }
 - Each agent is rewarded if the maximum distance $d$ to its neighbors is within a range $]\delta_L, \delta_U [$, and it is penalized otherwise: $\mathcal{R} =  0 \text{ if } \delta_U < d < \delta_L, \text{ otherwise } -1$
+
+{{% multicol %}}
+
+{{% col %}}
+
+<img src="flock.gif" />
+
+{{%/ col %}}
+
+{{% col %}}
+
+<img src="flock2.gif" />
+
+{{%/ col %}}
+
+{{%/ multicol %}}
 
 ---
 
