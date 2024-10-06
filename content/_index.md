@@ -31,7 +31,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 # Many-Agent Reinforcement Learning
 
-<img src="marl.png" style="width: 100%" />
+<img src="marl.png" style="width: 90%" />
 
 ---
 
@@ -59,6 +59,30 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
     - $\mathbb{A}$ is a prototypical agent *defining properties* common to all agents
     - $\mathcal{T}: \mathcal{S^\mathcal{P}} \times \mathcal{A}^\mathcal{P} \times \mathcal{S^\mathcal{P}} \rightarrow \mathbb{R}^\mathcal{P}$ is the *global transition function*, determining the evolution of the system's state based on the current states and actions of all agents
     - $\xi: \mathcal{S^\mathcal{P}} \rightarrow \mathcal{O}^\mathcal{P}$ is a function *mapping the state of all agents to the corresponding observations* available to each agent
+{{%/ fragment %}}
+
+</div>
+
+---
+
+# MARL Formalization (2)
+
+<div style="text-align:left;">
+
+{{% fragment %}}
+- The *dynamic behavior* of the ManyRL system is captured by the following equations: 
+    - $\textbf{o}_t = \xi(\textbf{s}_t)$: agents perceive the environment as a *set of observations*, provided by the function $\mathcal{E}$, and starting from environmental state $\textbf{s}_t$
+    - $\textbf{a}_t = \pi(\textbf{o}_t)$: agents choose actions according to their *policy* $\pi$
+    - $(\textbf{s}_{t+1}, \textbf{r}_t) = \mathcal{T}(\textbf{s}_t, \textbf{a}_t)$: the environment *evolves to a new state*, according to the *transition function* $\mathcal{T}$
+{{%/ fragment %}}
+{{% fragment %}}
+- The goal of a ManyRL system is to *learn a policy $\pi$* that maximizes the *expected cumulative collective reward* over time: 
+    - $\max_{\pi} \mathbb{E} \left[ \sum_{t=0}^{\infty} \sum_{i=1}^{\mathcal{P}} r^i_t \right]$
+{{%/ fragment %}}
+{{% fragment %}}
+-  The *most common approach* to optimize the cumulative collective reward in ManyRL systems:
+    - *Deep Reinforcement Learning* algorithms
+    - *Centralized Training Decentralized Execution* (CTDE) paradigm as learning strategy
 {{%/ fragment %}}
 
 </div>
@@ -236,8 +260,8 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 - Current observation $\rho$
 - Action computation $\gamma$
-- Environment interation $\theta$
-- Next observatiobn $\rho_\mathcal{+}$
+- Environment interaction $\theta$
+- Next observation $\rho_\mathcal{+}$
 - Collective reward computation $R$
 - Experience storage $\mathbb{E}$
 
@@ -308,4 +332,8 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 ---
 
-# Conclusion and Future Work
+# What's next?
+
+- Integration of *additional learning algorithms*
+- Evaluate the pipeline on a *wider range of many-agent learning scenarios*
+- Integrate the pipeline within the *main Alchemist distribution*
