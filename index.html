@@ -37,7 +37,7 @@
 </div>
 </section><section>
 <h1 id="many-agent-reinforcement-learning">Many-Agent Reinforcement Learning</h1>
-<img src="marl.png" style="width: 100%">
+<img src="marl.png" style="width: 90%">
 </section><section>
 <h1 id="marl-formalization">MARL Formalization</h1>
 <div style="text-align:left;">
@@ -86,6 +86,52 @@
 <li>$\mathbb{A}$ is a prototypical agent <em>defining properties</em> common to all agents</li>
 <li>$\mathcal{T}: \mathcal{S^\mathcal{P}} \times \mathcal{A}^\mathcal{P} \times \mathcal{S^\mathcal{P}} \rightarrow \mathbb{R}^\mathcal{P}$ is the <em>global transition function</em>, determining the evolution of the system’s state based on the current states and actions of all agents</li>
 <li>$\xi: \mathcal{S^\mathcal{P}} \rightarrow \mathcal{O}^\mathcal{P}$ is a function <em>mapping the state of all agents to the corresponding observations</em> available to each agent</li>
+</ul>
+</li>
+</ul>
+
+</span>
+<p></p>
+</div>
+</section><section>
+<h1 id="marl-formalization-2">MARL Formalization (2)</h1>
+<div style="text-align:left;">
+<p>
+
+<span class="fragment ">
+  </span></p><ul>
+<li>The <em>dynamic behavior</em> of the ManyRL system is captured by the following equations:
+<ul>
+<li>$\textbf{o}_t = \xi(\textbf{s}_t)$: agents perceive the environment as a <em>set of observations</em>, provided by the function $\mathcal{E}$, and starting from environmental state $\textbf{s}_t$</li>
+<li>$\textbf{a}_t = \pi(\textbf{o}_t)$: agents choose actions according to their <em>policy</em> $\pi$</li>
+<li>$(\textbf{s}_{t+1}, \textbf{r}_t) = \mathcal{T}(\textbf{s}_t, \textbf{a}_t)$: the environment <em>evolves to a new state</em>, according to the <em>transition function</em> $\mathcal{T}$</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+<span class="fragment ">
+  <ul>
+<li>The goal of a ManyRL system is to <em>learn a policy $\pi$</em> that maximizes the <em>expected cumulative collective reward</em> over time:
+<ul>
+<li>$\max_{\pi} \mathbb{E} \left[ \sum_{t=0}^{\infty} \sum_{i=1}^{\mathcal{P}} r^i_t \right]$</li>
+</ul>
+</li>
+</ul>
+
+</span>
+
+
+
+<span class="fragment ">
+  <ul>
+<li>The <em>most common approach</em> to optimize the cumulative collective reward in ManyRL systems:
+<ul>
+<li><em>Deep Reinforcement Learning</em> algorithms</li>
+<li><em>Centralized Training Decentralized Execution</em> (CTDE) paradigm as learning strategy</li>
 </ul>
 </li>
 </ul>
@@ -286,8 +332,8 @@
     <div class="row "><div class="col "><ul>
 <li>Current observation $\rho$</li>
 <li>Action computation $\gamma$</li>
-<li>Environment interation $\theta$</li>
-<li>Next observatiobn $\rho_\mathcal{+}$</li>
+<li>Environment interaction $\theta$</li>
+<li>Next observation $\rho_\mathcal{+}$</li>
 <li>Collective reward computation $R$</li>
 <li>Experience storage $\mathbb{E}$</li>
 </ul>
@@ -339,7 +385,12 @@
 <img src="simulation.svg" style="width: 100%">
 </div>
 </section><section>
-<h1 id="conclusion-and-future-work">Conclusion and Future Work</h1>
+<h1 id="whats-next">What’s next?</h1>
+<ul>
+<li>Integration of <em>additional learning algorithms</em></li>
+<li>Evaluate the pipeline on a <em>wider range of many-agent learning scenarios</em></li>
+<li>Integrate the pipeline within the <em>main Alchemist distribution</em></li>
+</ul>
 </section>
 
   
