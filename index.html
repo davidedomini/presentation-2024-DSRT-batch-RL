@@ -25,7 +25,8 @@
       <div class="slides">
   
 
-    <section><h1 id="a-reusable-simulation-pipeline-for-many-agent-reinforcement-learning">A Reusable Simulation Pipeline for Many-Agent Reinforcement Learning</h1>
+    <section><h1 id="a-reusable-simulation-pipeline-for">A Reusable Simulation Pipeline for</h1>
+<h1 id="many-agent-reinforcement-learning">Many-Agent Reinforcement Learning</h1>
 <p><a href="mailto:davide.domini@unibo.it"><span style="color: #BD4089">Davide Domini</span></a>,
 <a href="mailto:gianluca.aguzzi@unibo.it">Gianluca Aguzzi</a> ,
 <a href="mailto:danilo.pianini@unibo.it">Danilo Pianini</a>,
@@ -36,8 +37,31 @@
 <img src="disi.svg" style="width: 40%">
 </div>
 </section><section>
-<h1 id="many-agent-reinforcement-learning">Many-Agent Reinforcement Learning</h1>
+<h1 id="many-agent-reinforcement-learning-1">Many-Agent Reinforcement Learning</h1>
 <img src="marl.png" style="width: 90%">
+</section><section>
+<h1 id="marl-examples">MARL Examples</h1>
+
+<div class="container w-100 p-0">
+    <div class="row "><div class="col "><div style="text-align: center; width: 100%;">
+<img src="swarm1.jpg" style="width: 100%">
+</div>
+</div>
+<!-- 
+
+<div class='col '><div style="text-align: center; width: 100%;">
+<img src="swarm2.jpg" style="width: 100%" />
+</div>
+</div> -->
+<div class="col "><div style="text-align: center; width: 100%;">
+<img src="iov.png" style="width: 100%">
+</div>
+</div>
+</div>
+</div>
+<!-- <div style="text-align: center; width: 60%;"> -->
+<img src="swarm2.jpg" style="width:50%">
+<!-- </div> -->
 </section><section>
 <h1 id="marl-formalization">MARL Formalization</h1>
 <div style="text-align:left;">
@@ -93,13 +117,16 @@
 </span>
 <p></p>
 </div>
-</section><section>
-<h1 id="marl-formalization-2">MARL Formalization (2)</h1>
-<div style="text-align:left;">
-<p>
+<!-- ---
 
-<span class="fragment ">
-  </span></p><ul>
+# MARL Formalization (2)
+
+<div style="text-align:left;">
+
+
+
+<span class='fragment ' >
+  <ul>
 <li>The <em>dynamic behavior</em> of the ManyRL system is captured by the following equations:
 <ul>
 <li>$\textbf{o}_t = \xi(\textbf{s}_t)$: agents perceive the environment as a <em>set of observations</em>, provided by the function $\mathcal{E}$, and starting from environmental state $\textbf{s}_t$</li>
@@ -109,11 +136,11 @@
 </li>
 </ul>
 
+</span>
 
 
 
-
-<span class="fragment ">
+<span class='fragment ' >
   <ul>
 <li>The goal of a ManyRL system is to <em>learn a policy $\pi$</em> that maximizes the <em>expected cumulative collective reward</em> over time:
 <ul>
@@ -126,7 +153,7 @@
 
 
 
-<span class="fragment ">
+<span class='fragment ' >
   <ul>
 <li>The <em>most common approach</em> to optimize the cumulative collective reward in ManyRL systems:
 <ul>
@@ -137,8 +164,9 @@
 </ul>
 
 </span>
-<p></p>
-</div>
+
+
+</div> -->
 </section><section>
 <h1 id="motivation">Motivation</h1>
 <div style="text-align:left;">
@@ -353,11 +381,21 @@
 <ul>
 <li>Experiment on <em>multi-agent flocking behavior</em> : agents must learn to move while maintaining <em>cohesive</em> groups and avoiding <em>collisions</em></li>
 <li>Cohesion among agents is defined by two hyperparameters $\delta_U$ and $\delta_L$ (<em>target distance range</em> an agent aims to maintain from its <em>neighbors</em>)</li>
-<li><em>$100$ agents</em> in a Euclidean 2D space with no boundaries</li>
-<li>Each agent has <em>$8$ possible movement actions</em> corresponding to the directions on a grid (horizontal, vertical, and diagonal)</li>
+</ul>
+<!-- - *$100$ agents* in a Euclidean 2D space with no boundaries -->
+<!-- - Each agent has *$8$ possible movement actions* corresponding to the directions on a grid (horizontal, vertical, and diagonal) -->
+<ul>
 <li>The observation space for each agent is defined as the <em>relative distance vector to its neighbors</em>: $\mathcal{O} =$ { $( x_i - x_j, y_i - y_j ) \mid j \in \mathcal{N}_i$ }</li>
 <li>Each agent is rewarded if the maximum distance $d$ to its neighbors is within a range $]\delta_L, \delta_U [$, and it is penalized otherwise: $\mathcal{R} =  0 \text{ if } \delta_U &lt; d &lt; \delta_L, \text{ otherwise } -1$</li>
 </ul>
+
+<div class="container w-100 p-0">
+    <div class="row "><div class="col "><img src="flock.gif">
+</div>
+<div class="col "><img src="flock2.gif">
+</div>
+</div>
+</div>
 </section><section>
 <h1 id="experimental-evaluation-setup">Experimental Evaluation: Setup</h1>
 <ul>
