@@ -71,7 +71,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 <img src="swarm2.jpg" style="width:50%" />
 <!-- </div> -->
 
-
+<!-- 
 ---
 # MARL Formalization
 
@@ -99,7 +99,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
     - $\xi: \mathcal{S^\mathcal{P}} \rightarrow \mathcal{O}^\mathcal{P}$ is a function *mapping the state of all agents to the corresponding observations* available to each agent
 {{%/ fragment %}}
 
-</div>
+</div> -->
 
 <!-- ---
 
