@@ -131,7 +131,7 @@ International Symposium on Distributed Simulation and Real Time Applications @ D
 
 <div style="text-align:left;">
 {{% fragment %}}
-- **Challenges in Multi-Agent Reinforcement Learning (ManyRL):**
+- **Challenges in Many-Agent Reinforcement Learning (ManyRL):**
     - *Decentralized* decision-making processes lead to *complex system dynamics*
     - *Emergent behaviors* arise from *interactions* among numerous autonomous agents
 {{%/ fragment %}}
